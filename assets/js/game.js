@@ -4,7 +4,6 @@
                     ║║║║║╩╣║║║║║║╩╣║║║
 Developed By:       ╚╩═╩╩═╩══╩╩╩╩═╩══╝
 */
-
 let canvas = document.getElementById("snake"); /* Selecionando o ID */
 let context = canvas.getContext("2d"); /* Renderizando o desenho - plano 2D */
 let box = 32; /* 32 Pixels cada quadrado do Canvas */
@@ -20,22 +19,27 @@ let food ={//Gerando numeros aleatorios para o nascimento da comida
     y: Math.floor(Math.random() * 15 + 1) * box
 }
 
+// Volume do jogo
+let audio = document.getElementById("myAudio");
+audio.volume = 0.1;
+
+
 
 function criarBG(){ /* Desenhando o Canvas */
-    context.fillStyle = "lightgreen"; /* Color BG */
+    context.fillStyle = "#201F1F"; /* Color BG */
     context.fillRect(0, 0, 16 * box, 16 * box); /* Desenho do retangulo : 4 Parametros, posição de x e y altura e largura */
 }
 
 function criarCobrinha (){
     for(i = 0; i < snake.length; i++){
-        context.fillStyle = "green";
+        context.fillStyle = "#FFFFFF";
         context.fillRect(snake[i].x, snake[i].y, box, box);
     }
 }
 
 // Desenhando a comida
 function drawFood(){
-    context.fillStyle = "red";
+    context.fillStyle = "#FFFFFF";
     context.fillRect(food.x, food.y, box, box); /* Coodernadas da frutinha */
 }
 
@@ -62,7 +66,6 @@ function iniciarJogo(){
             alert('Game Over! :(');
         }
     }
-
 
     criarBG();
     criarCobrinha();
