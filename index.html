@@ -7,7 +7,7 @@
     <meta name="keyword" content="Game, SnakeGame, WebDeveloper">
 
     <!-- Icon Site -->
-    <link rel="shor tcut icon" href="assets/image/M.ico" type="image/x-icon"/>
+    <link rel="shor tcut icon" href="assets/image/icon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     
     <!-- CSS -->
@@ -16,17 +16,23 @@
     <!-- JS -->
     <script defer src="assets/js/game.js"></script>
 
-    <title>Minhoca Game</title>
+    <title>Snake Game</title>
 </head>
 <body>
 
-        <audio id="myAudio" autoplay loop>
+
+    <audio id="myAudio" autoplay loop>
             <source src="assets/sounds/ben10.mp3" type="audio/mpeg"/>
-        </audio>
+    </audio>
 
+    <div class="container box-Titulo">
+        <img src="assets/image/logoSnakeGame.png" alt="logoSnakeGame">
 
-    <img src="assets/image/logoSnakeGame.png" alt="Titulo">
-    <!-- <p id="pontuacao">0</p> -->
+        <div class="ptn-Pontos">
+            <p id="pontuacao">0</p>
+        </div>
+    </div>
+    
     <canvas id="snake" width="512" height="512"></canvas>
 
 

@@ -11,21 +11,48 @@ body {
     align-items: center;
     flex-direction: column;
 
-    font-size: 18px;
     font-family: 'Cute Font', cursive;
-    font-size: 18px;
+    font-size: 20px;
 }
-
 
 #snake {
     border: solid 10px white;
 }
-img {
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     padding: 10px;
+    padding-right: 15%;
+    padding-left: 15%;
 }
 
 
+img {
+    position: relative;
+    right: 15%;
+}
 
+
+/* Corrigir as gambiarras de posicionamento */
+.ptn-Pontos {
+    background-image: url('../image/pontuacao.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 163px;
+    height: 57px;
+
+    position: relative;
+    left: 15%;
+    margin-top: 5%;  
+}
+
+#pontuacao {
+    position: relative;
+    left: 80%;
+}
 
 /* Footer */
 footer ,
@@ -41,7 +68,6 @@ footer .myFooter span {
   color: white; 
   animation: hearts 0.6s cubic-bezier(0.18, 0.89, 0.29, 1.05) infinite;
 }
-
 
 /* Small Screen - Heart */
 @-moz-keyframes hearts {
