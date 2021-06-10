@@ -15,16 +15,28 @@ snake[0] = {
 }
 let direction = "right";
 
-function criarBG(){ /* Desenhando o Canvas */
-    context.fillStyle   =   "#AC5DD9"; /* Color BG */
-    context.fillRect(0, 0, 16 * box, 16 *box); /* Desenho do retangulo : 4 Parametros, posição de x e y altura e largura */
+let food ={//Gerando numeros aleatorios para o nascimento da comida
+    x: Math.floor(Math.random() * 15 + 1) * box,
+    y: Math.floor(Math.random() * 15 + 1) * box
 }
 
-function criarCobrinha(){
-    for(i=0; i < snake.length; i++){
-        context.fillStyle   = "#DDA5E9";
+
+function criarBG(){ /* Desenhando o Canvas */
+    context.fillStyle = "lightgreen"; /* Color BG */
+    context.fillRect(0, 0, 16 * box, 16 * box); /* Desenho do retangulo : 4 Parametros, posição de x e y altura e largura */
+}
+
+function criarCobrinha (){
+    for(i = 0; i < snake.length; i++){
+        context.fillStyle = "green";
         context.fillRect(snake[i].x, snake[i].y, box, box);
     }
+}
+
+// Desenhando a comida
+function drawFood(){
+    context.fillStyle = "red";
+    context.fillRect(food.x, food.y, box, box); /* Coodernadas da frutinha */
 }
 
 
@@ -47,6 +59,7 @@ function iniciarJogo(){
 
     criarBG();
     criarCobrinha();
+    drawFood();
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
@@ -56,14 +69,14 @@ function iniciarJogo(){
     if(direction == "up") snakeY -= box;
     if(direction == "down") snakeY += box;
 
-    snake.pop();
+    snake.pop(); //pop tira o último elemento da lista
 
-    let newHead = {
+    let newHead ={
         x: snakeX,
         y: snakeY
     }
 
-    snake.unshift(newHead);
+    snake.unshift(newHead); //Adiciona mais quadradinho a cobrinha
 }
 
 let jogo = setInterval(iniciarJogo, 100); /* Intervalo para iniciar o jogo */
