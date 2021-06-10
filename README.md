@@ -6,7 +6,7 @@
 
 ### 🐍 Sobre o Projeto:
 
-O Project-MinhocaGame é uma recriação das mecanicas do jogo arcadeSnake Game proposto pela plataforma de cursos gratuitos [Digital Innovation One](https://web.digitalinnovation.one/home) através do Bootcamp de JavaScript para Games.
+O Project-MinhocaGame é uma recriação das mecanicas do jogo arcade Snake Game proposto pela plataforma de cursos gratuitos [Digital Innovation One](https://web.digitalinnovation.one/home) através do Bootcamp de JavaScript para Games.
 
 ##### Snake Game:
 Navegue pela tela controlando a cobra que está faminta por blocos mas tome cuidado para não colidir com o proprio corpo ou com as "paredes" que cercam a area do jogo.
