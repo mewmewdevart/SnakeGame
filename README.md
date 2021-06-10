@@ -26,7 +26,8 @@ Controle a direção da cabeça da minhoca através das setas do teclado (para c
 - Desafio: [Bootcamp Js para Games](https://web.digitalinnovation.one/track/javascript-game-developer)
 
 ### :video_game: Print Screen:
-![snakeGame](https://user-images.githubusercontent.com/50052600/121603647-77f0d180-ca1f-11eb-9605-c7eca01e9353.png)
+![snakeGame](https://user-images.githubusercontent.com/50052600/121605519-ebe0a900-ca22-11eb-9548-0c526840aca6.png)
+
 
 
 
